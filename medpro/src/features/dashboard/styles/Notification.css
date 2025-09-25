@@ -1,0 +1,89 @@
+/* .notification-navbar {
+  position: relative;
+  display: inline-block;
+}
+
+.notification-navbar.notification-button {
+  background: none;
+  border: none;
+  position: relative;
+
+} */
+
+.notifications-navbar {
+  position: relative;
+  display: inline-block;
+}
+
+.bell-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  position: relative;
+  cursor: pointer;
+}
+
+.badge {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 250px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.notification-list li {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.notification-list li.unread {
+  background-color: #eef6ff;
+  font-weight: bold;
+}
+
+.notification-list li.read {
+  background-color: #fff;
+  color: #666;
+}
+
+.notification-list li.empty {
+  padding: 20px;
+  text-align: center;
+  color: #aaa;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+}
