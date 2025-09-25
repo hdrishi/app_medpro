@@ -1,0 +1,47 @@
+.customPopup {
+  position: absolute;
+  top: 50px;
+  right: 50pt;
+  border-radius: 10px;
+  width: 25rem;
+  height: 10rem;
+  background-color: rgb(238, 239, 234);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.notification-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 10rem;
+  overflow-y: auto;
+  cursor: pointer;
+}
+
+.notification-list li {
+  padding: 0.2rem;
+  border-left: 0.2rem solid #005993;
+  margin: 0.5rem;
+}
+
+.notification-list li:hover {
+  border-left: 0.2rem solid #67a25e;
+}
+
+.notification-badge {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  display: inline-grid;
+  border-radius: 50%;
+  font-size: small;
+  background-color: #000000 !important;
+  color: #ffffff;
+  padding-top: 6px;
+  top: -13px;
+  right: 10px;
+  border: 2px solid #ffffff;
+  text-align: center;
+  justify-content: center;
+}
