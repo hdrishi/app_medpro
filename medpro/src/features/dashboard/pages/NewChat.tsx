@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Dropdown } from "react-bootstrap";
+import "../styles/NewChat.css";
 
 const NewChat = () => {
   return (
@@ -8,14 +9,19 @@ const NewChat = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          borderTop: "1px solid rgb(204, 204, 204)",
+          // borderTop: "1px solid rgb(204, 204, 204)",
           padding: "0.5rem",
           position: "relative",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "80px",
         }}
       >
         <form
           style={{
-            width: "100%",
+            width: "60%",
+            boxShadow: "0px 3px 6px #00000029",
+            borderRadius: "10px",
           }}
         >
           <textarea
@@ -25,13 +31,16 @@ const NewChat = () => {
               resize: "none",
               padding: "1rem",
               boxSizing: "border-box",
-              border: "1px solid #ccc",
+              border: "none",
+              borderRadius: "10px",
+              outline: "none",              // border: "1px solid #ccc",
               fontSize: "1rem",
               fontFamily: "inherit",
               marginRight: "8px",
               width: "100%",
               bottom: "1rem",
-              borderBottom: "none",
+              backgroundColor: "white",
+              // borderBottom: "none",
               //   boxShadow: "0px 0px 6px rgba(0, 0, 0, 0.5)",
             }}
           />
@@ -43,9 +52,9 @@ const NewChat = () => {
               paddingBottom: "0.3rem",
               width: "100%",
               display: "flex",
-              backgroundColor: "none",
-              border: "1px solid #ccc",
-              borderTop: "none",
+              backgroundColor: "white",
+              // border: "1px solid #ccc",
+              // borderTop: "none",
               top: "-8px",
               height: "2.5rem",
             }}

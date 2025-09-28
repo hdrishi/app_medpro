@@ -1,0 +1,166 @@
+.nav .nav-link {
+  padding: 6px 10px;
+}
+
+.nav .nav-link :hover {
+  color: #025CBC;
+  font-weight: 500;
+}
+
+.m-r-10 {
+  margin-right: 10px;
+}
+
+.new-chat-icon {
+  font-size: 20px;
+  color: #40F2CC;
+  margin-right: 10px;
+}
+
+.collapse-icon {
+  font-size: 20px;
+  color: #025CBC;
+}
+.menu-icons {
+  font-size: 18px;
+  color: #025CBC;
+  margin-right: 10px;
+}
+.menu-text-new-chat {
+  font-size: 16px;
+  font-weight: 700;
+  color: #025CBC;
+}
+.menu-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #707070;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.recent-chat {
+  color: grey; /* Inherit the text color of the parent element */
+  text-decoration: none; /* Remove the underline */
+  cursor: default; /* Change the cursor from a pointer to the default arrow */
+  pointer-events: none
+}
+
+.two-line-ellipsis {
+display: -webkit-box;
+  -webkit-line-clamp: 1;   /* limit to 2 lines */
+  line-clamp: 1;           /* standard property for compatibility */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flex-inlin {
+  display: flex !important;
+  align-items: baseline;
+}
+
+.profile {
+  background-color: white;
+  position: absolute;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  width: 95% !important;
+  height: 70px;
+  justify-content: space-between !important;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.profile-icon-collapsed {
+  position: absolute;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  width: 40px;
+  text-align: center;
+}
+
+.profile-circle-collapsed {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #D6F3FF;
+  border-radius:  40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon-collapsed {
+  font-size: 15px;
+  color: #18DCB2;
+}
+
+.profile-circle {
+  width: 65px;
+  height: 65px;
+  border: 2px solid #D6F3FF;
+  border-radius:  40px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon {
+  font-size: 30px;
+  color: #18DCB2;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #18DCB2;
+}
+
+.profile-info {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.profile-email {
+  font-size: 12px;
+  color: #707070;
+}
+
+.chev-down {
+  font-size: 24px;
+  color: #C3C3C3;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.recent-chats-section {
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.welcome-message {
+  text-align: center;
+}
+
+.welcome {
+  color: #025CBC;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.brand-name {
+  height: auto;
+  width: 125px;
+  margin-bottom: 14px;
+  margin-left: 12px;
+}

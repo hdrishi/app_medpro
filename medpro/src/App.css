@@ -28,6 +28,10 @@
   color: #61dafb;
 }
 
+.verdana-text {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
