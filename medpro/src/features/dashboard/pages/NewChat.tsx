@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import { Button, Dropdown } from "react-bootstrap";
 import "../styles/NewChat.css";
 import { useNavigate } from "react-router-dom";
-
+import medprotext from "../../../medpro-text.png";
 
 const NewChat = () => {
   const navigate = useNavigate();
   const handleNavigation = (event: any) => {
     event.preventDefault();
-    navigate("chat-history");
+    navigate("/dashboard/chat-history");
   };
-  const [files, setFiles] = useState<{ name: string; type: string; size: number }[]>([]);
+  const [files, setFiles] = useState<
+    { name: string; type: string; size: number }[]
+  >([]);
 
   // Allowed extensions
   const allowedExtensions = ["jpg", "jpeg", "doc", "docx", "pdf"];
@@ -22,7 +24,7 @@ const NewChat = () => {
     const fileArray = Array.from(selectedFiles);
 
     // Filter valid files
-    const validFiles = fileArray.filter(file => {
+    const validFiles = fileArray.filter((file) => {
       const ext = file.name.split(".").pop()?.toLowerCase();
       return ext && allowedExtensions.includes(ext);
     });
@@ -38,14 +40,17 @@ const NewChat = () => {
       return;
     }
 
-    setFiles(prev => [...prev, ...validFiles.map(f => ({ name: f.name, type: f.type, size: f.size }))]);
+    setFiles((prev) => [
+      ...prev,
+      ...validFiles.map((f) => ({ name: f.name, type: f.type, size: f.size })),
+    ]);
 
     // Reset input so the same file can be reselected if removed
     event.target.value = "";
   };
 
   const handleRemoveFile = (index: number) => {
-    setFiles(prevFiles => prevFiles.filter((_, i) => i !== index));
+    setFiles((prevFiles) => prevFiles.filter((_, i) => i !== index));
   };
 
   const getFileClass = (fileName: string) => {
@@ -65,7 +70,7 @@ const NewChat = () => {
     }
   };
 
-    const formatFileSize = (size: number) => {
+  const formatFileSize = (size: number) => {
     if (size < 1024) return size + " B";
     else if (size < 1024 * 1024) return (size / 1024).toFixed(1) + " KB";
     else return (size / (1024 * 1024)).toFixed(1) + " MB";
@@ -87,12 +92,13 @@ const NewChat = () => {
         return "FILE";
     }
   };
-    
-
 
   return (
     <React.Fragment>
-      <h1 style={{ textAlign: "center" }}>Welcome to MedPro</h1>
+      <div className="welcome-message">
+        <span className="welcome verdana-text">Welcome to</span>
+        <img src={medprotext} className="brand-name" />
+      </div>
       <div
         style={{
           display: "flex",
@@ -121,7 +127,7 @@ const NewChat = () => {
               boxSizing: "border-box",
               border: "none",
               borderRadius: "10px",
-              outline: "none",              // border: "1px solid #ccc",
+              outline: "none", // border: "1px solid #ccc",
               fontSize: "1rem",
               fontFamily: "inherit",
               marginRight: "8px",
@@ -132,23 +138,32 @@ const NewChat = () => {
               //   boxShadow: "0px 0px 6px rgba(0, 0, 0, 0.5)",
             }}
           />
-       {files.length > 0 && (
-        <div className="uploaded-file-container">
-          {files.map((file, index) => (
-            <div key={index} className={`${getFileClass(file.name)} uploaded-file`}>
-              <span className={`text-90 ${getFileClass(file.name)}`}>{getFileLabel(file.name)}</span>
-              <div className="file-info">
-                <span className="file-name">{file.name}</span>
-                <span className="file-size">{formatFileSize(file.size)}</span>
-              </div>
-              <div className="remove-btn" onClick={() => handleRemoveFile(index)}>
-                <i className="bi bi-dash-circle-fill fs-20"></i>
-              </div>
+          {files.length > 0 && (
+            <div className="uploaded-file-container">
+              {files.map((file, index) => (
+                <div
+                  key={index}
+                  className={`${getFileClass(file.name)} uploaded-file`}
+                >
+                  <span className={`text-90 ${getFileClass(file.name)}`}>
+                    {getFileLabel(file.name)}
+                  </span>
+                  <div className="file-info">
+                    <span className="file-name">{file.name}</span>
+                    <span className="file-size">
+                      {formatFileSize(file.size)}
+                    </span>
+                  </div>
+                  <div
+                    className="remove-btn"
+                    onClick={() => handleRemoveFile(index)}
+                  >
+                    <i className="bi bi-dash-circle-fill fs-20"></i>
+                  </div>
+                </div>
+              ))}
             </div>
-            
-          ))}
-        </div>
-      )}
+          )}
           <div
             style={{
               position: "relative",
@@ -168,22 +183,26 @@ const NewChat = () => {
               className="custom-file-upload"
               id="attachFile"
             >
-              <div className="chatbox-square"><i className="bi bi-plus fs-25 color-primary"></i></div>
+              <div className="chatbox-square">
+                <i className="bi bi-plus fs-25 color-primary"></i>
+              </div>
             </label>
             <input
               id="fileUploader"
               type="file"
               accept=".jpg,.jpeg,.doc,.docx,.pdf"
               onChange={handleFileChange}
-              disabled={files.length >= 2} // disable if already 2 files
-              style={{ display: "none;" }}
+              disabled={files.length >= 2}
+              style={{ display: "none" }}
             />
             <Dropdown
               className="new-chat-icon"
               style={{ backgroundColor: "none !important" }}
             >
               <Dropdown.Toggle variant="success" id="dropdown-basic">
-                <div className="chatbox-square"><i className="bi bi-stars fs-15 color-primary"></i></div>
+                <div className="chatbox-square">
+                  <i className="bi bi-stars fs-15 color-primary"></i>
+                </div>
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
@@ -206,12 +225,18 @@ const NewChat = () => {
               </Dropdown.Menu>
             </Dropdown>
 
-            <div className="justify-content-center send-container" style={{ flex: 1 }}></div>
-            <div className="justify-content-end" style={{ marginRight: "0.75rem", marginTop: "5px" }}>
-              <div className="chatbox-square-send" onClick={handleNavigation}><i className="bi bi-arrow-right send-icon"></i></div>
+            <div
+              className="justify-content-center send-container"
+              style={{ flex: 1 }}
+            ></div>
+            <div
+              className="justify-content-end"
+              style={{ marginRight: "0.75rem", marginTop: "5px" }}
+            >
+              <div className="chatbox-square-send" onClick={handleNavigation}>
+                <i className="bi bi-arrow-right send-icon"></i>
+              </div>
             </div>
-              
-            
           </div>
         </form>
       </div>
