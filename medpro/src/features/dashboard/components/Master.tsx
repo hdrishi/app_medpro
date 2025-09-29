@@ -1,10 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import "../styles/dashboard.css";
+import "../styles/Dashboard.css";
 import BrandLogo from "./BrandLogo";
 import NavbarMenu from "./NavbarMenu";
+import SidebarMenu from "./SidebarMenu";
 
 const Master = () => {
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+
   return (
     <React.Fragment>
       <Container fluid>
@@ -16,7 +19,9 @@ const Master = () => {
             <NavbarMenu />
           </Col>
         </Row>
-        <Row>{/* Sidebar component goes here */}</Row>
+        <Row>
+          <SidebarMenu />
+        </Row>
       </Container>
     </React.Fragment>
   );
