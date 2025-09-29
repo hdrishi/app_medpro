@@ -3,6 +3,8 @@ import React, { useRef, useState } from "react";
 import NewChat from "../pages/NewChat";
 import "../styles/SidebarMenu.css";
 import medprotext from "../../../medpro-text.png";
+import CreateChat from "../../chats/components/CreateChat";
+import { Link, Outlet } from "react-router-dom";
 
 const SidebarMenu = () => {
     const [collapsed, setCollapsed] = useState(false);

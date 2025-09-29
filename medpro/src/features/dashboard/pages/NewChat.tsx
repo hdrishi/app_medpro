@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { Button, Dropdown } from "react-bootstrap";
 import "../styles/NewChat.css";
+import { useNavigate } from "react-router-dom";
+
 
 const NewChat = () => {
-
+  const navigate = useNavigate();
+  const handleNavigation = (event: any) => {
+    event.preventDefault();
+    navigate("chat-history");
+  };
   const [files, setFiles] = useState<{ name: string; type: string; size: number }[]>([]);
 
   // Allowed extensions
@@ -82,8 +88,11 @@ const NewChat = () => {
     }
   };
     
+
+
   return (
     <React.Fragment>
+      <h1 style={{ textAlign: "center" }}>Welcome to MedPro</h1>
       <div
         style={{
           display: "flex",
@@ -199,7 +208,7 @@ const NewChat = () => {
 
             <div className="justify-content-center send-container" style={{ flex: 1 }}></div>
             <div className="justify-content-end" style={{ marginRight: "0.75rem", marginTop: "5px" }}>
-              <div className="chatbox-square-send"><i className="bi bi-arrow-right send-icon"></i></div>
+              <div className="chatbox-square-send" onClick={handleNavigation}><i className="bi bi-arrow-right send-icon"></i></div>
             </div>
               
             

@@ -1,0 +1,20 @@
+.container {
+  /* background-color: #000000; */
+  padding-top: 1rem;
+  display: flex;
+  min-height: 90vh;
+  font-family: Arial, sans-serif;
+}
+
+.create-chat-container {
+  background-color: #ffffff;
+  width: 15rem;
+  transition: width 0.3s;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  height: 100% !important;
+  width: 100% !important;
+}
