@@ -1,9 +1,17 @@
 import React from "react";
 import { Button, Dropdown } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const NewChat = () => {
+  const navigate = useNavigate();
+  const handleNavigation = (event: any) => {
+    event.preventDefault();
+    navigate("chat-history");
+  };
+
   return (
     <React.Fragment>
+      <h1 style={{ textAlign: "center" }}>Welcome to MedPro</h1>
       <div
         style={{
           display: "flex",
@@ -96,7 +104,7 @@ const NewChat = () => {
               className="new-chat-icon justify-content-end"
               style={{ right: "1.2em", position: "relative" }}
             >
-              <i className="bi bi-send-fill"></i>
+              <i className="bi bi-send-fill" onClick={handleNavigation}></i>
             </button>
           </div>
         </form>

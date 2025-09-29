@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../styles/Dashboard.css";
 import BrandLogo from "./BrandLogo";
@@ -6,6 +6,8 @@ import NavbarMenu from "./NavbarMenu";
 import SidebarMenu from "./SidebarMenu";
 
 const Master = () => {
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+
   return (
     <React.Fragment>
       <Container fluid>

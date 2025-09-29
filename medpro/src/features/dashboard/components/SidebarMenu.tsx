@@ -1,6 +1,8 @@
 import { Nav } from "react-bootstrap";
 import React, { useState } from "react";
 import NewChat from "../pages/NewChat";
+import CreateChat from "../../chats/components/CreateChat";
+import { Link, Outlet } from "react-router-dom";
 
 const SidebarMenu = () => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
@@ -17,18 +19,29 @@ const SidebarMenu = () => {
             {sidebarCollapsed ? "→" : "←"}
           </button>
           {!sidebarCollapsed && (
-            <Nav>
-              <ul>
-                <li>New Chat</li>
-                <li>Chat</li>
-                <li>Prompt</li>
-              </ul>
-            </Nav>
+            // <Nav>
+            //   <ul>
+            //     <li>New Chat</li>
+            //     <li>Chat</li>
+            //     <li>Prompt</li>
+            //   </ul>
+            // </Nav>
+            <nav>
+              <Link to="/" className="nav-link">
+                New Chat
+              </Link>
+              <Link to="/chat-history" className="nav-link">
+                Chat History
+              </Link>
+              <Link to="/prompts" className="nav-link">
+                Prompts
+              </Link>
+            </nav>
           )}
         </div>
         <div className={`content ${sidebarCollapsed ? "expanded" : ""}`}>
-          <h1 style={{ textAlign: "center" }}>Welcome to MedPro</h1>
-          <NewChat />
+          {/* <NewChat /> */}
+          <Outlet />
         </div>
       </div>
     </React.Fragment>

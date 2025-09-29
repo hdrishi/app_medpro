@@ -100,9 +100,8 @@
 .content {
   flex-grow: 1;
   /* background-color: #ecf0f1; */
-  padding: 20px;
+  padding: 2px 20px 0 20px;
   transition: margin-left 0.3s;
-  overflow: auto;
 }
 
 .new-chat-icon {
