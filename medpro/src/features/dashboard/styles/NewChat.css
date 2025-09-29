@@ -1,0 +1,152 @@
+.chatbox-square {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #60D3FF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+} 
+
+.fs-25 {
+    font-size: 25px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.color-primary {
+    color: #025CBC;
+}
+
+.send-icon {
+    color: #FF0061;
+    font-size: 18px;
+    transform: rotate(-45deg);
+}
+
+.chatbox-square-send {
+    
+    width: 30px;
+    height: 30px;
+    border: 2px solid #FF0061;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.send-container {
+    padding: 6px 12px 6px 0px;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.uploaded-file-container {
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+}
+
+.uploaded-file {
+    position: relative;
+    margin-right: 20px;
+    height: 70px;
+}
+
+.file-name {
+  text-overflow:ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  font-family: 'Inter', sans-serif;
+  color: #979797;
+  font-size: 16px;
+}
+
+.file-size {
+  font-family: 'Inter', sans-serif;
+  color: #B0B0B0;
+  font-size: 12px;
+}
+
+.file-badge {
+    margin-bottom: 10px;
+    padding: 2px;
+    border-radius: 12px;
+    background-color: #fff;
+    max-width: 280px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    min-width: 51px;
+}
+
+.file-info {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 226px;
+    flex-direction: column;
+    min-width: 200px;
+    height: 66px;
+    justify-content: center;
+    padding: 8px 12px 8px 12px;
+    row-gap: 5px;
+}
+
+.text-90 {
+  transform: rotate(-90deg);
+}
+
+.pdf-text {
+  color: #D15151; /* red for PDF */
+}
+
+.jpg-text {
+  color: #5151D1; /* blue for JPG/JPEG */
+}
+
+.doc-text {
+  color: #51D151; /* green for DOC/DOCX */
+}
+
+.other-text {
+  color: #A0A0A0; /* grey for other files */
+}
+
+.pdf {
+  background-color: #FFBBBB; /* red for PDF */
+}
+
+.jpg {
+  background-color: #99CCFF; /* blue for JPG/JPEG */
+}
+
+.doc {
+  background-color: #99FF99; /* green for DOC/DOCX */
+}
+
+.other {
+  background-color: #DDDDDD; /* grey for other files */
+}
+
+.remove-btn {
+  color: red;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+    top: -16px; /* Adjust for desired overlap/position */
+    right: -10px; /* Adjust for desired overlap/position */
+    color: #FF0061; /* Example styling */
+    font-size: 24px; /* Example styling */
+    z-index: 1;
+}
