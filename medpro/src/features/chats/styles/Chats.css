@@ -2,19 +2,93 @@
   /* background-color: #000000; */
   padding-top: 1rem;
   display: flex;
-  min-height: 90vh;
-  font-family: Arial, sans-serif;
+  min-height: 89vh;
+  max-height: 89vh;
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 .create-chat-container {
   background-color: #ffffff;
   width: 15rem;
   transition: width 0.3s;
-  padding: 10px;
+  padding: 20px 25px 20px 30px;
   box-sizing: border-box;
   position: relative;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   height: 100% !important;
   width: 100% !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-container-title {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #025CBC;
+}
+
+.chat-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: 2px solid #60D3FF;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px;
+}
+
+.summary {
+  font-size: 15px;
+  font-weight: 400;
+  color: #707070;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: Inter;
+}
+
+.accessed {
+  font-size: 14px;
+  color: #A3A3A3;
+}
+
+.search-container {
+  position: relative; /* Allows absolute positioning of the icon */
+  margin: 20px auto;
+  width: 68vw !important;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px 10px 40px; /* Adjust padding to make space for the icon */
+  border: 1px solid #c3c3c3;
+  border-radius: 25px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px; /* Adjust icon position */
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the icon */
+  color: #888;
+  font-size: 18px;
+}
+
+.chat-list {
+  width: 68vw !important;
+  overflow-y: auto;
+  max-height: 65vh;
+}
+
+.list-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 70vh;
 }
