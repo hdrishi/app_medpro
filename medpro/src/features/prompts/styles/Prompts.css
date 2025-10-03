@@ -7,7 +7,7 @@
   font-family: Verdana, Geneva, sans-serif;
 }
 
-.create-chat-container {
+.prompt-container {
   background-color: #ffffff;
   transition: width 0.3s;
   padding: 20px 25px 20px 30px;
@@ -17,18 +17,16 @@
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   height: 100% !important;
   width: 100% !important;
-  display: flex;
-  justify-content: space-between;
 }
 
-.chat-container-title {
+.prompt-container-title {
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 2rem;
   color: #025cbc;
 }
 
-.chat-item {
+.prompt-item {
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 15px;
@@ -56,14 +54,13 @@
   color: #a3a3a3;
 }
 
-.search-container {
+.search-container-prompt {
   position: relative; /* Allows absolute positioning of the icon */
   margin: 20px auto;
-  width: 68vw !important;
 }
 
-.search-input {
-  width: 100%;
+.search-input-prompt {
+  width: 50%;
   padding: 10px 15px 10px 40px; /* Adjust padding to make space for the icon */
   border: 1px solid #c3c3c3;
   border-radius: 25px;
@@ -80,7 +77,7 @@
   font-size: 18px;
 }
 
-.chat-list {
+.prompt-list {
   width: 68vw !important;
   overflow-y: auto;
   max-height: 65vh;
@@ -90,4 +87,42 @@
   flex: 1;
   overflow-y: auto;
   max-height: 70vh;
+}
+
+.bi-journal-text::before {
+  content: "\f444";
+  float: right;
+  justify-content: center;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  padding: 4px;
+  position: relative;
+}
+
+.btn-promptcreation {
+  display: inline-block;
+  border: 1px solid #c3c3c3;
+  border-radius: 25px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px;
+  padding: 10px 20px 10px 20px;
+  background: none !important;
+  margin-left: 4px;
+}
+
+.select-promptdept {
+  display: inline-block;
+  border: 1px solid #c3c3c3;
+  border-radius: 25px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px;
+  padding: 10px 20px 10px 20px;
+  margin-left: 4px;
+  background: none !important;
+}
+
+.prompt-create-contents {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

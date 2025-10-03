@@ -75,7 +75,7 @@ const SidebarMenu = () => {
               <i className="bi bi-wechat menu-icons"></i>
               <span className="menu-text">{!collapsed && "Chats"}</span>
             </Link>
-            <Link to="chat-prompts" className="flex-center">
+            <Link to="prompt-library" className="flex-center">
               <i className="bi bi-journal-text menu-icons"></i>
               <span className="menu-text">{!collapsed && "Library"}</span>
             </Link>
