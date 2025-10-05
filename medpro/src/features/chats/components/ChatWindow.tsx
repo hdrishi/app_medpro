@@ -136,7 +136,7 @@ const ChatWindow = () => {
                       msg.sender === "user" ? "borders-1 order-1" : "borders-2 order-2"
                     }`}
                   >
-                    {msg.text}
+                    <span className="mess-font">{msg.text}</span>
 
                     {/* Files */}
                     {msg.files && msg.files.length > 0 && (

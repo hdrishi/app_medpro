@@ -20,6 +20,11 @@
         padding: 0rem 1rem 1rem 1rem !important;
 }
 
+.mess-font {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+}
+
 .width-inherito {
       width: 100%;
     max-width: -webkit-fill-available;

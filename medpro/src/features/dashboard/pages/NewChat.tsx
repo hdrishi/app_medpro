@@ -64,6 +64,13 @@ const handleNavigation = (event: any) => {
       }
     }
 
+      /* ✅ Limit total file count ≤ 10 */
+    if (files.length + validFiles.length > 10) {
+      alert("You can upload a maximum of 10 files.");
+      event.target.value = "";
+      return;
+    }
+
     /* Check individual image size ≤ 3.5 MB */
     const imageExtensions = ["jpg", "jpeg", "png"];
     if (validFiles.some((f) => imageExtensions.includes(f.ext) && f.size > 3.5 * 1024 * 1024)) {
