@@ -1,10 +1,11 @@
 import Master from "./features/dashboard/components/Master";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NewChat from "./features/dashboard/pages/NewChat";
-import CreateChat from "./features/chats/components/CreateChat";
+import ChatWindow from "./features/chats/components/ChatWindow";
 import ChatHistory from "./features/chats/components/ChatHistory";
 import CreatePrompt from "./features/prompts/components/CreatePrompt";
 import PromptLibrary from "./features/prompts/components/PromptLibrary";
+import { ChatProvider } from "./features/chats/components/ChatContext";
 
 const routes = createBrowserRouter([
   {
@@ -13,11 +14,17 @@ const routes = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <NewChat />,
+        element: 
+        <ChatProvider>
+          <NewChat />
+        </ChatProvider>,
       },
       {
-        path: "chat-create",
-        element: <CreateChat />,
+        path: "chat-window",
+        element: 
+        <ChatProvider>
+          <ChatWindow />
+        </ChatProvider>,
       },
       {
         path: "chat-history",
@@ -34,6 +41,7 @@ const routes = createBrowserRouter([
     ],
   },
 ]);
+
 
 const App = () => {
   return <RouterProvider router={routes} />;

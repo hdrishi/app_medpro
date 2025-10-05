@@ -1,58 +1,63 @@
+/* ---------------- Navigation ---------------- */
 .nav .nav-link {
-  padding: 6px 10px;
+  padding: 0.375rem 0.500rem; /* 6px 10px -> responsive */
 }
 
-.nav .nav-link :hover {
+.nav .nav-link:hover {
   color: #025CBC;
   font-weight: 500;
 }
 
 .m-r-10 {
-  margin-right: 10px;
+  margin-right: 0.625rem; /* 10px */
 }
 
 .new-chat-icon {
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px */
   color: #40F2CC;
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 
 .collapse-icon {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #025CBC;
 }
+
 .menu-icons {
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
   color: #025CBC;
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
+
 .menu-text-new-chat {
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   font-weight: 700;
   color: #025CBC;
 }
+
 .menu-text {
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   font-weight: 400;
   color: #707070;
 }
 
 .flex-center {
-  display: flex;
+  display: flex !important;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .recent-chat {
-  color: grey; /* Inherit the text color of the parent element */
-  text-decoration: none; /* Remove the underline */
-  cursor: default; /* Change the cursor from a pointer to the default arrow */
-  pointer-events: none
+  color: grey;
+  text-decoration: none;
+  cursor: default;
+  pointer-events: none;
 }
 
 .two-line-ellipsis {
-display: -webkit-box;
-  -webkit-line-clamp: 1;   /* limit to 2 lines */
-  line-clamp: 1;           /* standard property for compatibility */
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -63,91 +68,93 @@ display: -webkit-box;
   align-items: baseline;
 }
 
+/* ---------------- Profile ---------------- */
 .profile {
   background-color: white;
   position: absolute;
-  bottom: 12px;
+  bottom: 0.75rem; /* 12px */
   display: flex;
   align-items: center;
-  width: 95% !important;
-  height: 70px;
-  justify-content: space-between !important;
+  width: 95%;
+  height: 4.375rem; /* 70px */
+  justify-content: space-between;
   cursor: pointer;
-  padding-left: 10px;
+  padding-left: 0.625rem;
 }
 
 .profile-icon-collapsed {
   position: absolute;
-  bottom: 12px;
+  bottom: 0.75rem;
   display: flex;
   align-items: center;
-  justify-content: center !important;
-  width: 40px;
+  justify-content: center;
+  width: 2.5rem; /* 40px */
   text-align: center;
 }
 
 .profile-circle-collapsed {
-  width: 35px;
-  height: 35px;
-  border: 2px solid #D6F3FF;
-  border-radius:  40px;
+  width: 2.1875rem; /* 35px */
+  height: 2.1875rem;
+  border: 0.125rem solid #D6F3FF;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .profile-icon-collapsed {
-  font-size: 15px;
+  font-size: 0.9375rem; /* 15px */
   color: #18DCB2;
 }
 
 .profile-circle {
-  width: 65px;
-  height: 65px;
-  border: 2px solid #D6F3FF;
-  border-radius:  40px;
-  margin-right: 10px;
+  width: 4.0625rem; /* 65px */
+  height: 4.0625rem;
+  border: 0.125rem solid #D6F3FF;
+  border-radius: 50%;
+  margin-right: 0.625rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .profile-icon {
-  font-size: 30px;
+  font-size: 1.875rem; /* 30px */
   color: #18DCB2;
 }
 
 .profile-name {
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   font-weight: 600;
   color: #18DCB2;
 }
 
 .profile-info {
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
   line-height: 1.2;
 }
 
 .profile-email {
-  font-size: 12px;
+  font-size: 0.75rem; /* 12px */
   color: #707070;
 }
 
 .chev-down {
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px */
   color: #C3C3C3;
   margin-left: auto;
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 
+/* ---------------- Recent Chats Section ---------------- */
 .recent-chats-section {
   flex-grow: 1;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
+/* ---------------- Welcome Message ---------------- */
 .welcome-message {
   text-align: center;
 }
@@ -155,12 +162,32 @@ display: -webkit-box;
 .welcome {
   color: #025CBC;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 1.875rem; /* 30px */
 }
 
 .brand-name {
   height: auto;
-  width: 125px;
-  margin-bottom: 14px;
-  margin-left: 12px;
+  width: 7.8125rem; /* 125px */
+  margin-bottom: 0.875rem; /* 14px */
+  margin-left: 0.75rem; /* 12px */
+}
+
+/* ---------------- Media Queries ---------------- */
+@media (max-width: 768px) {
+  .profile { height: 3.5rem; }
+  .profile-circle { width: 3.25rem; height: 3.25rem; }
+  .profile-icon { font-size: 1.5rem; }
+  .profile-name { font-size: 0.875rem; }
+  .profile-email { font-size: 0.6875rem; }
+  .menu-text-new-chat, .menu-text { font-size: 0.875rem; }
+}
+
+@media (max-width: 480px) {
+  .profile { height: 3rem; }
+  .profile-circle { width: 2.5rem; height: 2.5rem; }
+  .profile-icon { font-size: 1.25rem; }
+  .profile-name { font-size: 0.75rem; }
+  .profile-email { font-size: 0.625rem; }
+  .menu-text-new-chat, .menu-text { font-size: 0.75rem; }
+  .chev-down { font-size: 1.25rem; }
 }
