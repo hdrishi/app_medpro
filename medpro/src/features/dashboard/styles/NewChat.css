@@ -1,152 +1,200 @@
+/* ---------------- General chatbox styles ---------------- */
 .chatbox-square {
-    width: 30px;
-    height: 30px;
+    width: 2rem; /* changed from 30px */
+    height: 2rem;
     border: 2px solid #60D3FF;
-    border-radius: 8px;
+    border-radius: 0.5rem; /* changed from 8px */
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-} 
-
-.fs-25 {
-    font-size: 25px;
-}
-
-.fs-20 {
-    font-size: 20px;
-}
-
-.fs-15 {
-    font-size: 15px;
-}
-
-.color-primary {
-    color: #025CBC;
-}
-
-.send-icon {
-    color: #FF0061;
-    font-size: 18px;
-    transform: rotate(-45deg);
 }
 
 .chatbox-square-send {
-    
-    width: 30px;
-    height: 30px;
+    width: 2rem;
+    height: 2rem;
     border: 2px solid #FF0061;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
 
-.send-container {
-    padding: 6px 12px 6px 0px;
-    border: none;
-    display: inline-block;
-    cursor: pointer;
+.fs-25 { font-size: 1.6rem; } /* responsive font-size */
+.fs-20 { font-size: 1.25rem; }
+.fs-15 { font-size: 0.9rem; }
+
+.color-primary { color: #025CBC; }
+
+.send-icon {
+    color: #FF0061;
+    font-size: 1.1rem;
+    transform: rotate(-45deg);
 }
 
+/* ---------------- Uploaded files ---------------- */
 .uploaded-file-container {
-    margin-top: 10px;
-    padding: 10px;
+    margin-top: 0.6rem;
+    padding-left: 0.5rem;
     display: flex;
+    overflow-x: auto; /* allow scrolling on small screens */
+    margin-bottom: 0.3rem;
 }
 
 .uploaded-file {
     position: relative;
-    margin-right: 20px;
-    height: 70px;
+    margin-right: 1rem;
+    height: 4.5rem; /* changed from 70px */
+    flex-shrink: 0; /* prevent shrinking on small screens */
 }
 
 .file-name {
-  text-overflow:ellipsis;
+    text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-  font-family: 'Inter', sans-serif;
-  color: #979797;
-  font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: #979797;
+    font-size: 0.95rem;
 }
 
 .file-size {
-  font-family: 'Inter', sans-serif;
-  color: #B0B0B0;
-  font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    color: #B0B0B0;
+    font-size: 0.75rem;
 }
 
 .file-badge {
-    margin-bottom: 10px;
-    padding: 2px;
-    border-radius: 12px;
+    margin-bottom: 0.5rem;
+        margin-top: 0.4rem;
+    padding: 0.2rem;
+    border-radius: 0.75rem;
     background-color: #fff;
-    max-width: 280px;
+    max-width: 18rem; /* flexible max width */
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    min-width: 51px;
 }
 
 .file-info {
     display: flex;
     width: 100%;
     background-color: white;
-    border-radius: 10px;
-    max-width: 226px;
+    border-radius: 0.5rem;
+    max-width: 14rem;
     flex-direction: column;
-    min-width: 200px;
-    height: 66px;
+    min-width: 12rem;
+    height: 4rem;
     justify-content: center;
-    padding: 8px 12px 8px 12px;
-    row-gap: 5px;
+    padding: 0.5rem;
+    row-gap: 0.3rem;
 }
 
-.text-90 {
-  transform: rotate(-90deg);
-}
+.text-90 { transform: rotate(-90deg); }
 
-.pdf-text {
-  color: #D15151; /* red for PDF */
-}
+/* ---------------- File badge colors ---------------- */
+.pdf-text { color: #D15151; }
+.jpg-text { color: #5151D1; }
+.png-text { color: #5151D1; }
+.other-text { color: #A0A0A0; }
 
-.jpg-text {
-  color: #5151D1; /* blue for JPG/JPEG */
-}
-
-.doc-text {
-  color: #51D151; /* green for DOC/DOCX */
-}
-
-.other-text {
-  color: #A0A0A0; /* grey for other files */
-}
-
-.pdf {
-  background-color: #FFBBBB; /* red for PDF */
-}
-
-.jpg {
-  background-color: #99CCFF; /* blue for JPG/JPEG */
-}
-
-.doc {
-  background-color: #99FF99; /* green for DOC/DOCX */
-}
-
-.other {
-  background-color: #DDDDDD; /* grey for other files */
-}
+.pdf { background-color: #FFBBBB; }
+.jpg { background-color: #99CCFF; }
+.png { background-color: #99CCFF; }
+.doc { background-color: #99FF99; }
+.other { background-color: #DDDDDD; }
 
 .remove-btn {
-  color: red;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-    top: -16px; /* Adjust for desired overlap/position */
-    right: -10px; /* Adjust for desired overlap/position */
-    color: #FF0061; /* Example styling */
-    font-size: 24px; /* Example styling */
+    color: red;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: -1rem;
+    right: -0.6rem;
+    color: #FF0061;
+    font-size: 1.5rem;
     z-index: 1;
+}
+
+/* ---------------- Dropdown selected state ---------------- */
+.dropdown-selected {
+    width: 2rem !important;
+    height: 2rem !important;
+    border: 2px solid #60D3FF !important;
+    background-color: #60D3FF !important;
+    border-radius: 0.5rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+}
+
+/* ---------------- Dropdown toggle ---------------- */
+.dropdown-toggle {
+    white-space: nowrap !important;
+    background: none !important;
+    border: none !important;
+}
+
+.dropdown-toggle :hover {
+    white-space: nowrap !important;
+    background: none !important;
+}
+
+/* ---------------- Send container ---------------- */
+.send-container {
+    padding: 0.4rem 0.75rem 0.4rem 0;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* ---------------- Media Queries for responsiveness ---------------- */
+@media (max-width: 768px) {
+    .chatbox-square, .chatbox-square-send, .dropdown-selected {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    .fs-25 { font-size: 1.3rem; }
+    .fs-20 { font-size: 1rem; }
+    .fs-15 { font-size: 0.8rem; }
+
+    .uploaded-file-container {
+        flex-wrap: nowrap;
+    }
+
+    .file-badge, .file-info {
+        max-width: 12rem;
+        min-width: 8rem;
+        height: 3.5rem;
+        padding: 0.3rem;
+    }
+
+    .remove-btn {
+        font-size: 1.2rem;
+        top: -0.7rem;
+        right: -0.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .chatbox-square, .chatbox-square-send, .dropdown-selected {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .fs-25 { font-size: 1.1rem; }
+    .fs-20 { font-size: 0.9rem; }
+    .fs-15 { font-size: 0.7rem; }
+
+    .file-badge, .file-info {
+        max-width: 10rem;
+        min-width: 6rem;
+        height: 3rem;
+        padding: 0.25rem;
+    }
+
+    .uploaded-file-container {
+        padding-left: 0.25rem;
+    }
 }

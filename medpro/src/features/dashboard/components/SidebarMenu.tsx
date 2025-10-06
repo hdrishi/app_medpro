@@ -65,19 +65,17 @@ const SidebarMenu = () => {
             )}
           </button>
           <Nav style={{ display: "grid", rowGap: "5px", alignItems: "center" }}>
-            <Link to="/" className="flex-center">
+            <Link to="/" className="flex-center nav-link">
               <i className="bi bi-plus-circle-fill new-chat-icon"></i>
-              <span className="menu-text-new-chat">
-                {!collapsed && "New Chat"}
-              </span>
+              {!collapsed && <span className="menu-text-new-chat">New Chat</span>}
             </Link>
-            <Link to="chat-history" className="flex-center">
+            <Link to="chat-history" className="flex-center nav-link">
               <i className="bi bi-wechat menu-icons"></i>
-              <span className="menu-text">{!collapsed && "Chats"}</span>
+              {!collapsed && <span className="menu-text">Chats</span>}
             </Link>
-            <Link to="prompt-library" className="flex-center">
+            <Link to="prompt-library" className="flex-center nav-link">
               <i className="bi bi-journal-text menu-icons"></i>
-              <span className="menu-text">{!collapsed && "Library"}</span>
+              {!collapsed && <span className="menu-text">Library</span>}
             </Link>
           </Nav>
           {!collapsed && (
